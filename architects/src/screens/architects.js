@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { withStyles } from '@material-ui/core';
 import Header from '../components/Header';
+import ArchitectProfile from '../components/ArchitectProfile';
 
 class Architects extends Component {
   render() {
+    const { classes } = this.props;
     return (
-      <div>
+      <div className={classes.root}>
+        <CssBaseline />
         <Header />
-        <Paper>
-          <Typography>
-            Belarusian architects
-          </Typography>
-        </Paper>
+        <ArchitectProfile />
       </div>
     );
   }
 }
 
-export default Architects;
+const styles = {
+  root: {
+    display: 'flex',
+  },
+};
+
+export default withStyles(styles)(Architects);
