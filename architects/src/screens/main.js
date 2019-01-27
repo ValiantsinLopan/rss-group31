@@ -7,6 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import Header from '../components/Header';
 import ContributorList from '../components/ContributorList';
+import ArchitectOfTheDay from '../components/ArchitectOfTheDay';
 
 
 class Main extends Component {
@@ -50,6 +51,7 @@ class Main extends Component {
           <div className={classes.archOfTheDayContent}>
             <Typography component="h2" variant="h4" color="inherit" gutterBottom>
               Architect of the day
+              <ArchitectOfTheDay />
             </Typography>
           </div>
         </Paper>
