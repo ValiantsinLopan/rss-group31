@@ -25,16 +25,17 @@ class Header extends Component {
   }
 
   render() {
-    const { classes, theme } = this.props;
+    const { classes, theme, showDrawer } = this.props;
     return (
       <div>
-        <AppBar position="fixed" className={classes.appBar}>
+        <AppBar position="fixed" className={showDrawer ? classes.appBar : classes}>
           <Toolbar>
             <IconButton
               color="inherit"
               aria-label="Open drawer"
               onClick={this.handleDrawerToggle}
               className={classes.menuButton}
+              disabled={!showDrawer}
             >
               <MenuIcon />
             </IconButton>
@@ -49,7 +50,7 @@ class Header extends Component {
               container={this.props.container}
               variant="temporary"
               anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-              open={this.state.mobileOpen}
+              open={this.state.mobileOpen && showDrawer}
               onClose={this.handleDrawerToggle}
               classes={{
                 paper: classes.drawerPaper,
@@ -63,8 +64,8 @@ class Header extends Component {
               classes={{
                 paper: classes.drawerPaper,
               }}
-              variant="permanent"
-              open
+              variant="persistent"
+              open={showDrawer}
             >
               <ArchitectsList />
             </Drawer>
