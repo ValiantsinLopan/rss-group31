@@ -1,5 +1,5 @@
-# rss-group31
-codejam-5 repo
+# Belarussian architects
+Deployed app url: https://amoebiusss.github.io/rss-group31/
 
 Файл architecrors.json содержит информацию об архитекторах.
 Содержит 5 архитекторов.
