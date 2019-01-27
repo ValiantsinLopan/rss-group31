@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import ImageGridList from './ImageGridList';
 
 class ArchitectProfile extends Component {
   render() {
@@ -9,6 +10,7 @@ class ArchitectProfile extends Component {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         {/* Paste profile components below */}
+        <ImageGridList />
         <Typography paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent
