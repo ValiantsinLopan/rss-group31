@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -23,7 +22,8 @@ const styles = {
 
   link: {
     marginTop: 0,
-    fontSize: '14px',
+    marginBottom: '10px',
+    fontSize: '12px',
     textDecoration: 'underline',
   },
 };
@@ -32,13 +32,14 @@ function Contributor(props) {
   const {
     classes, photo, name, link,
   } = props;
+
   return (
     <Card className={classes.card}>
       <CardActionArea>
         <CardMedia
           component="img"
           className={classes.media}
-          height="140"
+          height="200"
           image={photo}
         />
         <CardContent className={classes.cardContent}>
@@ -55,13 +56,6 @@ function Contributor(props) {
     </Card>
   );
 }
-
-// Contributor.propTypes = {
-//   // classes: PropTypes.object.isRequired,
-//   photo: PropTypes.string,
-//   name: PropTypes.string,
-//   link: PropTypes.string,
-// };
 
 Contributor.defaultProps = {
   photo: 'https://avatars1.githubusercontent.com/u/1309537?s=460&v=4',
