@@ -1,5 +1,6 @@
 [
 	{
+		"key" : "Karako",
 		"description": {
 			"name": {
 				"rus": {
@@ -130,6 +131,7 @@
 	},
 
 	{
+		"key": "Ananich",
 		"description": {
 			"name": {
 				"rus": {
@@ -301,6 +303,7 @@
 	},
 
 	{
+		"key": "Shabunevsky",
 		"description": {
 			"name": {
 				"rus": {
@@ -457,6 +460,7 @@
 	},
 
 	{
+		"key":"Telepnev",
 		"description": {
 			"name": {
 				"rus": {
@@ -588,6 +592,7 @@
 	},
 
 	{
+		"key":"Korol",
 		"description": {
 			"name": {
 				"rus": {
