@@ -5,15 +5,14 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
-import GridList from '@material-ui/core/GridList';
 import Header from '../components/Header';
-import Contributor from '../components/Contributor';
-// import contributorsList from '../data/contributors.json';
+import ContributorList from '../components/ContributorList';
 
 
 class Main extends Component {
   render() {
     const { classes } = this.props;
+
     return (
       <div className={classes.container}>
         <Header />
@@ -54,23 +53,13 @@ class Main extends Component {
             </Typography>
           </div>
         </Paper>
-        
+
         <Paper className={classes.contributors}>
           <div className={classes.contributorsContent}>
             <Typography component="h2" variant="h5" color="inherit" gutterBottom>
               Project team
             </Typography>
-            <div className={classes.contributorsList}>
-              <GridList cellHeight={160} className={classes.gridList} cols={3}>
-                {/* temporary */}
-                <Contributor />
-                <Contributor />
-                <Contributor />
-                <Contributor />
-                <Contributor />
-                {/* end of temporary */}
-              </GridList>
-            </div>
+            <ContributorList />
           </div>
         </Paper>
       </div>

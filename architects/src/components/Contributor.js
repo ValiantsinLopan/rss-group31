@@ -23,7 +23,8 @@ const styles = {
 
   link: {
     marginTop: 0,
-    fontSize: '14px',
+    marginBottom: '10px',
+    fontSize: '12px',
     textDecoration: 'underline',
   },
 };
@@ -32,13 +33,14 @@ function Contributor(props) {
   const {
     classes, photo, name, link,
   } = props;
+
   return (
     <Card className={classes.card}>
       <CardActionArea>
         <CardMedia
           component="img"
           className={classes.media}
-          height="140"
+          height="200"
           image={photo}
         />
         <CardContent className={classes.cardContent}>
