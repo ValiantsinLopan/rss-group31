@@ -80,6 +80,10 @@ const styles = theme => ({
     [theme.breakpoints.up('sm')]: {
       width: drawerWidth,
       flexShrink: 0,
+      marginBottom: '70px',
+    },
+    [theme.breakpoints.up('xs')]: {
+      marginBottom: '70px',
     },
   },
   appBar: {
