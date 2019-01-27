@@ -454,5 +454,133 @@
 				}
 			]
 		}
+	},
+
+	{
+		"description": {
+			"name": {
+				"rus": {
+					"firstName": "Владимир",
+					"secondName": "Телепнев",
+					"thirdName": "Николаевич",
+					"born_city": "Радуша"
+				},
+				"eng": {
+					"firstName": "Vladimir",
+					"secondName": "Telepnev",
+					"thirdName": "Nikolaevich",
+					"born_city": "Radusha"
+				},
+				"blr": {
+					"firstName": "Уладзімір",
+					"secondName": "Целяпнёў",
+					"thirdName": "Мікалаевіч",
+					"born_city": "Радуша"
+				},
+				"image": "http://bsa.by/ckfinder/userfiles/images/%D0%A2%D0%B5%D0%BB%D0%B5%D0%BF%D0%BD%D0%B5%D0%B2.jpg"
+			}	
+		},
+
+		"biography": {
+			"born_date": "8 марта 1950",
+			"born_city": {
+				"name": "Радуша",
+				"coords": "52.931824, 29.686253"
+			},
+			"death_place": {
+				"date": "18 декабря 2018"
+			},
+			"learn": "Учился в Белорусском Политехническом Институте",
+
+			"work": {
+				"Place": {
+					"title": "МинскМетроПроект",
+					"coords": "53.898637, 27.584883"
+				}
+			},
+
+			"progects": [
+				{
+					"date": "1990",
+					"image": "https://upload.wikimedia.org/wikipedia/commons/1/12/Frun_02.jpg",
+					"title": "Станция метро Фрунзенская"
+				},
+				
+                {
+					"date": "1991",
+					"image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Persham_02.jpg",
+					"title": "Станция метро Первомайская"
+				},
+
+                {
+					"date": "1995",
+					"image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Molodz_07.jpg",
+					"title": "Станция метро Молодежная"
+				},
+
+                {
+					"date": "1997",
+					"image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Autaz_05.jpg",
+					"title": "Станция метро Автозаводская"
+				},
+
+                {
+					"date": "2001",
+					"image": "https://upload.wikimedia.org/wikipedia/commons/5/59/Mahil_04.jpg",
+					"title": "Станция метро Могилевская"
+				},
+
+                {
+					"date": "2005",
+					"image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Sportyun_05.jpg",
+					"title": "Станция метро Спортивная, Кунцевщина"
+				},
+
+                {
+					"date": "2007",
+					"image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Bortr_02.jpg",
+					"title": "Станция метро Борисовский тракт"
+				},
+
+                {
+					"date": "2012",
+					"image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Piatrou%C5%A1%C4%8Dyna.jpg",
+					"title": "Станиця метро Петровщина, Михалово, Грушевка"
+				},
+
+                {
+					"date": "2014",
+					"image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/%D0%9C%D0%B0%D0%BB%D0%B8%D0%BD%D1%96%D0%B2%D0%BA%D0%B0_%28%D1%81%D1%82%D0%B0%D0%BD%D1%86%D1%96%D1%8F_%D0%BC%D0%B5%D1%82%D1%80%D0%BE%29.jpg",
+					"title": "Станция метро Малиновка"
+				}
+			],
+			
+			"timeline": [
+				{
+					"date": "1950",
+					"event": "Родился" 
+				},
+
+                				{
+					"date": "1972",
+					"event": "Окончил архитектурный факультет Белорусского Политехнического Института" 
+				},
+
+                				{
+					"date": "1972",
+					"event": "Работает архитектором, руководителем группы МФ «Союзмашпроект»" 
+				},
+
+                				{
+					"date": "1978",
+					"event": "Перешел на работу руководителем группы архитекторов в «Минскметропроект»" 
+				},
+
+                				{
+					"date": "1979",
+					"event": "вступил в Союз архитекторов СССР" 
+				}
+			]
+		}
 	}
 ]
