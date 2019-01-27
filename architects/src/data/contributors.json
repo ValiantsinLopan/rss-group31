@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Valentin Lopan",
+    "photo": "../img/contributors/c1.jpg",
+    "link": "https://github.com/ValiantsinLopan"
+  },
+  {
+    "name": "Alena Vasilchenko",
+    "photo": "../img/contributors/c2.jpg",
+    "link": "https://github.com/amoebiusss"
+  },
+  {
+    "name": "Dzmitry Zakhar",
+    "photo": "../img/contributors/c3.png",
+    "link": "https://github.com/SpiritForest"
+  },
+  {
+    "name": "Yevgeniy Puhach",
+    "photo": "../img/contributors/c4.jpg",
+    "link": "https://github.com/YevgeniyPy"
+  },
+  {
+    "name": "Kiryl Alexandrovich",
+    "photo": "../img/contributors/c5.png",
+    "link": "https://github.com/kirylAlexandrovich"
+  }
+]
