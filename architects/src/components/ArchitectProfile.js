@@ -48,6 +48,7 @@ class ArchitectProfile extends Component {
 const styles = theme => ({
   toolbar: theme.mixins.toolbar,
   content: {
+    maxWidth: '100%',
     flexGrow: 1,
     padding: theme.spacing.unit * 3,
   },
