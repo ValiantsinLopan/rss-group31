@@ -509,7 +509,8 @@
                 {
 					"date": "1991",
 					"image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Persham_02.jpg",
-					"title": "Станция метро Первомайская"
+					"title": "Станция метро Первомайская",
+					"video": "https://www.youtube.com/watch?v=KLDe-SPPKmA"
 				},
 
                 {
@@ -545,13 +546,15 @@
                 {
 					"date": "2012",
 					"image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Piatrou%C5%A1%C4%8Dyna.jpg",
-					"title": "Станиця метро Петровщина, Михалово, Грушевка"
+					"title": "Станиця метро Петровщина, Михалово, Грушевка",
+					"video": "https://www.youtube.com/watch?v=n0TcGg-jC2M"
 				},
 
                 {
 					"date": "2014",
 					"image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/%D0%9C%D0%B0%D0%BB%D0%B8%D0%BD%D1%96%D0%B2%D0%BA%D0%B0_%28%D1%81%D1%82%D0%B0%D0%BD%D1%86%D1%96%D1%8F_%D0%BC%D0%B5%D1%82%D1%80%D0%BE%29.jpg",
-					"title": "Станция метро Малиновка"
+					"title": "Станция метро Малиновка",
+					"video": "https://www.youtube.com/watch?v=hKt_QPRm_qg"
 				}
 			],
 			
@@ -579,6 +582,144 @@
                 				{
 					"date": "1979",
 					"event": "вступил в Союз архитекторов СССР" 
+				}
+			]
+		}
+	},
+
+	{
+		"description": {
+			"name": {
+				"rus": {
+					"firstName": "Владимир",
+					"secondName": "Король",
+					"thirdName": "Адамович",
+					"born_city": "Игумен"
+				},
+				"eng": {
+					"firstName": "Vladimir",
+					"secondName": "Korol",
+					"thirdName": "Adamovich",
+					"born_city": "Igumen"
+				},
+				"blr": {
+					"firstName": "Уладзімір",
+					"secondName": "Кароль",
+					"thirdName": "Адамовіч",
+					"born_city": "Ігумен"
+				},
+				"image": "https://upload.wikimedia.org/wikipedia/ru/7/7c/Karol_VA.jpg"
+			}	
+		},
+
+		"biography": {
+			"born_date": "14 декабря 1912",
+			"born_city": {
+				"name": "Игумен",
+				"coords": "53.711077, 28.419069"
+			},
+			"death_place": {
+				"date": "28 мая 1980"
+			},
+			"learn": "Учился в Витебском художественном техникуме",
+
+			"work": {
+				"Place": {
+					"title": "Белгоспроект",
+					"coords": "53.911260, 27.542691"
+				}
+			},
+
+			"progects": [
+				{
+					"date": "1946",
+					"title": "Проект центральной части столицы"
+				},
+
+                {
+					"date": "1946",
+					"image": "https://img.tyt.by/n/0a/e/10_starye_foto_minska_kors_tutby_20130305_8252.jpg",
+					"title": "Центральная площадь Минска"
+				},
+				
+                {
+					"date": "1950",
+					"image": "https://img.tyt.by/n/0d/3/pochtamt-17.jpg",
+					"title": "Здание главного почтамта на проспекте Независимости"
+				},
+
+                {
+					"date": "1954",
+					"image": "http://www.karta-minska.nemiga.info/victory-square/podvig.jpg",
+					"video": "https://www.youtube.com/watch?v=lxMfVdAml1A",
+					"title": "Монумент Победы"
+				},
+				
+                {
+					"date": "1962",
+					"image": "https://img.tyt.by/n/0d/a/09_starye_foto_minska_kors_tutby_20130305_8251.jpg",
+					"title": "Центральный телеграф Минск"
+				}
+			],
+			
+			"timeline": [
+				{
+					"date": "1912",
+					"event": "Родился" 
+				},
+
+                {
+					"date": "1934",
+					"event": "Поступил на архитектурный факультет Всероссийской академии искусств" 
+				},
+
+                {
+					"date": "1941",
+					"event": "Защитил диплом и вступил в народное ополчение помощником инженера дивизии" 
+				},
+
+                {
+					"date": "1941",
+					"event": "Отозван с фронта для работы во Всероссийской академии художеств" 
+				},
+
+                {
+					"date": "1942",
+					"event": "Эвакуирован в Среднюю Азию" 
+				},
+
+                {
+					"date": "1945",
+					"event": "Приехал в освобожденный Минск, где был назначен руководителем архитектурно-планировочной мастерской «Белгоспроект»" 
+				},
+
+                {
+					"date": "1946",
+					"event": "Разработал проект планировки и застройки центра Минска" 
+				},
+
+				{
+					"date": "1947",
+					"event": "Начал работать преподавателем, а затем и заведующим кафедрой градостроительства архитектурного факультета Белорусского политехнического института" 
+				},
+                {
+					"date": "1950",
+					"event": "Признан лучшим за проект памятника-монумента воинам Советской Армии и белорусским партизанам в городе Минске" 
+				},
+
+                {
+					"date": "1968",
+					"event": "Присуждена Государственная премия БССР за создание ансамбля проекта" 
+				},
+
+                {
+					"date": "1970",
+					"event": "Удостоен звания народного архитектора СССР" 
+				},
+
+				{
+					"date": "1980",
+					"event": "Умер" 
 				}
 			]
 		}
