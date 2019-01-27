@@ -10,7 +10,7 @@ class Architects extends Component {
     return (
       <div className={classes.root}>
         <CssBaseline />
-        <Header />
+        <Header showDrawer />
         <ArchitectProfile />
       </div>
     );

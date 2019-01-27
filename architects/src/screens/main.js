@@ -72,7 +72,6 @@ class Main extends Component {
 const styles = theme => ({
   banner: {
     backgroundColor: theme.palette.grey[800],
-    marginLeft: '240px',
     color: theme.palette.common.white,
     marginBottom: theme.spacing.unit * 4,
     [theme.breakpoints.down('xs')]: {
@@ -87,7 +86,6 @@ const styles = theme => ({
   },
   contributors: {
     backgroundColor: theme.palette.grey[800],
-    marginLeft: '240px',
     color: theme.palette.common.white,
     marginBottom: theme.spacing.unit * 4,
     [theme.breakpoints.down('xs')]: {
@@ -102,7 +100,6 @@ const styles = theme => ({
   },
   archOfTheDay: {
     backgroundColor: theme.palette.common.white,
-    marginLeft: '240px',
     color: theme.palette.grey[800],
     marginBottom: theme.spacing.unit * 4,
     [theme.breakpoints.down('xs')]: {
