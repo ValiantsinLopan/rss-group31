@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -57,13 +56,6 @@ function Contributor(props) {
     </Card>
   );
 }
-
-// Contributor.propTypes = {
-//   // classes: PropTypes.object.isRequired,
-//   photo: PropTypes.string,
-//   name: PropTypes.string,
-//   link: PropTypes.string,
-// };
 
 Contributor.defaultProps = {
   photo: 'https://avatars1.githubusercontent.com/u/1309537?s=460&v=4',
