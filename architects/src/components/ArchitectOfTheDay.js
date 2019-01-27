@@ -3,22 +3,22 @@ import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
-import ArchitectProfile from './ArchitectProfile';
+import ArchitectInfo from './ArchitectInfo';
 
-class ArchitectOfTheDay extends ArchitectProfile {
+class ArchitectOfTheDay extends ArchitectInfo {
   render() {
     const { classes } = this.props;
     const dummyUrl = '#';
     return (
       // dummy block; to be replaced
       <div className={classes.archOfTheDay}>
-        <Avatar src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Architect_Langbard_Iosif_Grigorevich.jpg/200px-Architect_Langbard_Iosif_Grigorevich.jpg" className={classes.bigAvatar} />
+        <Avatar src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Architect_Langbard_Iosif_Grigorevich.jpg/200px-Architect_Langbard_Iosif_Grigorevich.jpg" className={classes.archPhoto} />
         <Typography className={classes.archOfTheDayName} paragraph>
-          Architect of the day block is here.
+          Architect of the day block is here
         </Typography>
         <Typography paragraph>
           <Link href={dummyUrl} className={classes.link}>
-            link to the architects page
+            link to the page of this architect
           </Link>
         </Typography>
       </div>
@@ -32,10 +32,10 @@ const styles = theme => ({
     flexGrow: 1,
     padding: theme.spacing.unit * 3,
   },
-  bigAvatar: {
+  archPhoto: {
     margin: 10,
-    width: 80,
-    height: 80,
+    width: 100,
+    height: 100,
   },
   archOfTheDayName: {
     paddingTop: 50,
