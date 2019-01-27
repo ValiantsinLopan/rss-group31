@@ -2,7 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import Contributor from './Contributor';
-import contributors from '../data/contributors.json';
+import contributors from '../store/data/contributors.json';
 
 
 function ContributorList(props) {

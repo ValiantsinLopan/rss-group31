@@ -3,18 +3,37 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { withStyles } from '@material-ui/core';
+import { connect } from 'react-redux';
+import { setArchitect } from '../store/actions/architects';
 
 class ArchitectsList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedIndex: 0,
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  componentWillMount() {
+    this.props.setArchitect(this.props.architects[this.state.selectedIndex].key);
+  }
+
+  handleChange(event, index) {
+    this.setState({ selectedIndex: index });
+    this.props.setArchitect(this.props.architects[index].key);
+  }
+
   render() {
-    const { classes } = this.props;
+    const { classes, architects, language } = this.props;
     return (
       <div>
         <div className={classes.toolbar} />
         <List>
           {
-          ['Архитектор1', 'Архитектор2', 'Архитектор3', 'Архитектор4'].map(text => (
-            <ListItem button key={text}>
-              <ListItemText primary={text} />
+          architects.map((architect, i) => (
+            <ListItem button key={architect.key} onClick={event => this.handleChange(event, i)} selected={this.state.selectedIndex === i}>
+              <ListItemText primary={`${architect.description.name[language].firstName} ${architect.description.name[language].secondName}`} />
             </ListItem>
           ))
         }
@@ -28,4 +47,13 @@ const styles = theme => ({
   toolbar: theme.mixins.toolbar,
 });
 
-export default withStyles(styles, { withTheme: true })(ArchitectsList);
+export default connect(
+  store => ({
+    language: store.page.language,
+    architects: store.architects.architects,
+    currentArchitect: store.architects.currentArchitect,
+  }),
+  {
+    setArchitect,
+  },
+)(withStyles(styles, { withTheme: true })(ArchitectsList));

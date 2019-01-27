@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-// import architects from '../data/architects.json';
+import { connect } from 'react-redux';
 
 class ArchitectInfo extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, name, language } = this.props;
     return (
       // dummy block; to be replaced
       <div className={classes.archInfo}>
-        <Avatar src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Architect_Langbard_Iosif_Grigorevich.jpg/200px-Architect_Langbard_Iosif_Grigorevich.jpg" className={classes.archPhoto} />
+        <Avatar src={name.image} className={classes.archPhoto} />
         <Typography gutterBottom variant="h5" component="h2" className={classes.archName}>
-            Architect name is here
+          {`${name[language].firstName} ${name[language].thirdName} ${name[language].secondName}`}
         </Typography>
         <Typography className={classes.archInfo} paragraph>
           + short info.
@@ -42,4 +42,9 @@ const styles = theme => ({
   },
 });
 
-export default withStyles(styles, { withTheme: true })(ArchitectInfo);
+export default connect(
+  store => ({
+    language: store.page.language,
+    name: store.architects.currentArchitect.description.name,
+  }),
+)(withStyles(styles, { withTheme: true })(ArchitectInfo));
