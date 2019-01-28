@@ -2,25 +2,20 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-// import Link from '@material-ui/core/Link';
+import { connect } from 'react-redux';
+import { withLocalize } from 'react-localize-redux';
 import ArchitectInfo from './ArchitectInfo';
 
 class ArchitectOfTheDay extends ArchitectInfo {
   render() {
-    const { classes } = this.props;
-    // const dummyUrl = '#';
+    const { classes, name, language, activeLanguage } = this.props;
+    const lan = activeLanguage === undefined ? language : activeLanguage.code;
     return (
-      // warning: frankly hardcoded
       <div className={classes.archOfTheDay}>
-        <Avatar src="https://upload.wikimedia.org/wikipedia/ru/7/7c/Karol_VA.jpg" className={classes.archPhoto} />
+        <Avatar src={name.image} className={classes.archPhoto} />
         <Typography variant="h6" component="h2" className={classes.archOfTheDayName}>
-          Vladimir Adamovich Korol
+          {`${name[lan].firstName} ${name[lan].thirdName} ${name[lan].secondName}`}
         </Typography>
-        {/* <Typography paragraph>
-          <Link href={dummyUrl} className={classes.link}>
-            link to the page of this architect
-          </Link>
-        </Typography> */}
       </div>
     );
   }
@@ -42,4 +37,10 @@ const styles = theme => ({
   },
 });
 
-export default withStyles(styles, { withTheme: true })(ArchitectOfTheDay);
+export default withLocalize(connect(
+  store => ({
+    language: store.page.language,
+    name: store.architects.architects[Math.floor(Math.random() * store.architects.architects.length)].description.name,
+    architects: store.architects.architects,
+  }),
+)(withStyles(styles, { withTheme: true })(ArchitectOfTheDay)));

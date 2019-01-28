@@ -28,7 +28,7 @@ class Video extends Component {
     };
 
     return (
-      <Paper className={ classes.youtubeVideoBlock }>
+      <Paper className={classes.youtubeVideoBlock}>
         <YouTube
           videoId={bio.video_id}
           opts={opts}

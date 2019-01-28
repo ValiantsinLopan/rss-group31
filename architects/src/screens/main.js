@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
+import { Translate } from 'react-localize-redux';
 import { withStyles } from '@material-ui/core/styles';
 import Header from '../components/Header';
 import ContributorList from '../components/ContributorList';
@@ -17,16 +18,10 @@ class Main extends Component {
         <Paper className={classes.banner}>
           <div className={classes.bannerContent}>
             <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-              Culture portal
-              <br />
-              about belarusian architects
+              <Translate id="main.head" />
             </Typography>
             <Typography variant="subtitle2" color="inherit" paragraph gutterRight>
-              During the course of its history Belarusian nation has created
-              a highly developed and original architecture.
-              Its best monuments mirror the peculiarities and most
-              important architectural trends and achievements of the epoque,
-              prove the practical wisdom and artistic craftsmanship of Belarusian people.
+              <Translate id="main.description" />
             </Typography>
             <Link
               to="/architects"
@@ -38,7 +33,7 @@ class Main extends Component {
                 color="secondary"
                 size="large"
               >
-                Learn more!
+                <Translate id="main.learnMore" />
               </Button>
             </Link>
           </div>
@@ -47,7 +42,7 @@ class Main extends Component {
         <Paper className={classes.archOfTheDay}>
           <div className={classes.archOfTheDayContent}>
             <Typography component="h2" variant="h4" color="inherit" gutterBottom>
-              Architect of the day
+              <Translate id="main.architectOfDay" />
               <ArchitectOfTheDay />
             </Typography>
           </div>
@@ -56,7 +51,7 @@ class Main extends Component {
         <Paper className={classes.contributors}>
           <div className={classes.contributorsContent}>
             <Typography component="h2" variant="h5" color="inherit" gutterBottom>
-              Project team
+              <Translate id="main.team" />
             </Typography>
             <ContributorList />
           </div>
@@ -67,6 +62,9 @@ class Main extends Component {
 }
 
 const styles = theme => ({
+  link: {
+    textDecoration: 'none',
+  },
   banner: {
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
