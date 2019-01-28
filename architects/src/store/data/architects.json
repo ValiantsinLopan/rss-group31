@@ -532,8 +532,14 @@
                 {
 					"date": "2012",
 					"image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Piatrou%C5%A1%C4%8Dyna.jpg",
-					"title": "Станиця метро Петровщина, Михалово, Грушевка",
+					"title": "Станиця метро Петровщина",
 					"video": "https://www.youtube.com/watch?v=n0TcGg-jC2M"
+				},
+
+				{
+					"date": "2012",
+					"image": "https://belapan.by/webroot/delivery/images/photogalleriescache/2012/11/1/grushevka_metro/01_grushevka_metro.jpg",
+					"title": "Станиця метро Грушевка"
 				},
 
                 {
@@ -568,6 +574,11 @@
                 				{
 					"date": "1979",
 					"event": "Вступил в Союз архитекторов СССР" 
+				},
+
+				{
+					"date": "2018",
+					"event": "Умер"
 				}
 			]
 		}
