@@ -4,6 +4,7 @@ import ImageGridList from './ImageGridList';
 import ArchitectInfo from './ArchitectInfo';
 import ArchTimeline from './ArchTimeline';
 import SimpleModal from './SimpleModal';
+import MapBasics from './Map';
 
 
 class ArchitectProfile extends Component {
@@ -17,6 +18,7 @@ class ArchitectProfile extends Component {
         <ImageGridList />
         <ArchTimeline />
         <SimpleModal />
+        <MapBasics />
       </main>
     );
   }
