@@ -8,12 +8,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import { renderToStaticMarkup } from 'react-dom/server';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-<<<<<<< HEAD
 import { withLocalize, Translate } from 'react-localize-redux';
-=======
 import { Link } from 'react-router-dom';
 import indigo from '@material-ui/core/colors/indigo';
->>>>>>> dev
 import ArchitectsList from './ArchitectsList';
 import LanguageSwitcher from './LanguageSwitcher';
 import translation from '../store/data/translations.json';
