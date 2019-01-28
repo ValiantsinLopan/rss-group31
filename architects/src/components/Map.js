@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { YMaps, Map, GeoObject, Placemark } from 'react-yandex-maps';
+import { YMaps, Map, GeoObject } from 'react-yandex-maps';
 import { withStyles } from '@material-ui/core/styles';
 import { connect } from 'react-redux';
 import Paper from '@material-ui/core/Paper';
@@ -48,12 +48,7 @@ class MapBasics extends Component {
                     draggable: false,
                   }}
                 />
-          
-                {placemarks.map((placemarkParams, i) =>
-                  <Placemark key={i} {...placemarkParams} />
-                )}
               </Map>
-              
               }
           </div>
         </YMaps>
