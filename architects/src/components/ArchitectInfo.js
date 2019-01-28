@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 class ArchitectInfo extends Component {
   render() {
-    const { classes, name, language } = this.props;
+    const { classes, name, language, description } = this.props;
     return (
       // dummy block; to be replaced
       <div className={classes.archInfo}>
@@ -15,10 +15,7 @@ class ArchitectInfo extends Component {
           {`${name[language].firstName} ${name[language].thirdName} ${name[language].secondName}`}
         </Typography>
         <Typography className={classes.archInfo} paragraph>
-          + short info.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent
-            elementum facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus.
+          {description}
         </Typography>
       </div>
     );
@@ -37,14 +34,12 @@ const styles = theme => ({
     width: 200,
     height: 200,
   },
-  archInfo: {
-    paddingTop: 50,
-  },
 });
 
 export default connect(
   store => ({
     language: store.page.language,
     name: store.architects.currentArchitect.description.name,
+    description: store.architects.currentArchitect.biography.description,
   }),
 )(withStyles(styles, { withTheme: true })(ArchitectInfo));
