@@ -3,6 +3,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { withStyles } from '@material-ui/core';
+import { withLocalize } from 'react-localize-redux';
 import { connect } from 'react-redux';
 import { setArchitect } from '../store/actions/architects';
 
@@ -25,7 +26,8 @@ class ArchitectsList extends Component {
   }
 
   render() {
-    const { classes, architects, language } = this.props;
+    const { classes, architects, language, activeLanguage } = this.props;
+    const lan = activeLanguage === undefined ? language : activeLanguage.code;
     return (
       <div>
         <div className={classes.toolbar} />
@@ -33,7 +35,7 @@ class ArchitectsList extends Component {
           {
           architects.map((architect, i) => (
             <ListItem button key={architect.key} onClick={event => this.handleChange(event, i)} selected={this.state.selectedIndex === i}>
-              <ListItemText primary={`${architect.description.name[language].firstName} ${architect.description.name[language].secondName}`} />
+              <ListItemText primary={`${architect.description.name[lan].firstName} ${architect.description.name[lan].secondName}`} />
             </ListItem>
           ))
         }
@@ -47,7 +49,7 @@ const styles = theme => ({
   toolbar: theme.mixins.toolbar,
 });
 
-export default connect(
+export default withLocalize(connect(
   store => ({
     language: store.page.language,
     architects: store.architects.architects,
@@ -56,4 +58,4 @@ export default connect(
   {
     setArchitect,
   },
-)(withStyles(styles, { withTheme: true })(ArchitectsList));
+)(withStyles(styles, { withTheme: true })(ArchitectsList)));

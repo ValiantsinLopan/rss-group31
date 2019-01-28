@@ -5,17 +5,34 @@ import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
+import { renderToStaticMarkup } from 'react-dom/server';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import { withLocalize, Translate } from 'react-localize-redux';
 import { Link } from 'react-router-dom';
 import indigo from '@material-ui/core/colors/indigo';
 import ArchitectsList from './ArchitectsList';
+import LanguageSwitcher from './LanguageSwitcher';
+import translation from '../store/data/translations.json';
 
 const drawerWidth = 240;
 
 class Header extends Component {
   constructor(props) {
     super(props);
+    this.props.initialize({
+      languages: [
+        { name: 'En', code: 'eng' },
+        { name: 'Ru', code: 'rus' },
+        { name: 'By', code: 'blr' },
+      ],
+      options: {
+        renderToStaticMarkup,
+        defaultLanguage: 'eng',
+      },
+    });
+
+    this.props.addTranslation(translation);
     this.state = {
       mobileOpen: false,
     };
@@ -46,10 +63,11 @@ class Header extends Component {
               className={classes.link}
             >
               <Typography variant="h5" className={classes.homeLink} noWrap>
-                Belarusian architects portal
+                <Translate id="appbar.title" />
               </Typography>
-            </Link>
-
+            </Link>  
+            <div className={classes.grow} />
+            <LanguageSwitcher />
           </Toolbar>
         </AppBar>
         <nav className={classes.drawer}>
@@ -85,6 +103,9 @@ class Header extends Component {
 }
 
 const styles = theme => ({
+  grow: {
+    flexGrow: 1,
+  },
   drawer: {
     [theme.breakpoints.up('sm')]: {
       width: drawerWidth,
@@ -122,4 +143,4 @@ const styles = theme => ({
   },
 });
 
-export default withStyles(styles, { withTheme: true })(Header);
+export default withLocalize(withStyles(styles, { withTheme: true })(Header));

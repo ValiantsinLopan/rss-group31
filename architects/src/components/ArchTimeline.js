@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Timeline } from 'react-material-timeline';
 import { withStyles } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
+import { Translate } from 'react-localize-redux';
 
 const styles = () => ({
   timelineTitle: {
@@ -22,7 +23,7 @@ class ArchTimeline extends Component {
     return (
       <div>
         <Typography variant="h3" component="h2" className={classes.timelineTitle}>
-          Timeline
+          <Translate id="profile.timeline" />
         </Typography>
 
         <Timeline events={events} />

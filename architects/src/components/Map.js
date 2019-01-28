@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { YMaps, Map, GeoObject } from 'react-yandex-maps';
 import { withStyles } from '@material-ui/core/styles';
 import { connect } from 'react-redux';
+import { Translate } from 'react-localize-redux';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
@@ -30,7 +31,9 @@ class MapBasics extends Component {
 
     return (
       <Paper>
-        <Typography className={classes.mapTitle} variant="h5" component="h2"> Explore some sign places on thе map: </Typography>
+        <Typography className={classes.mapTitle} variant="h5" component="h2"> 
+          <Translate id="profile.map"/>
+        </Typography>
         <YMaps>
           <div id="map-basics" className={classes.map}>
             {showMap &&

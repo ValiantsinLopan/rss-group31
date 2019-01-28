@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import { Translate } from 'react-localize-redux';
 import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
 import Video from './Video';
@@ -64,9 +65,7 @@ class SimpleModal extends React.Component {
     return (
       <Paper className={classes.videoBlock}>
         <Typography variant="h4" component="h2" gutterBottom>
-          Want to watch the video about architect's work?
-          <br />
-          Click the button below!
+          <Translate id="profile.video.callToAction"/>
         </Typography>
         <Button 
         onClick={this.handleOpen} 
@@ -75,7 +74,7 @@ class SimpleModal extends React.Component {
         color="secondary"
         size="large"
         >
-          Watch in Modal
+          <Translate id="profile.video.button"/>
         </Button>
         <Modal
           aria-labelledby="simple-modal-title"
@@ -85,7 +84,7 @@ class SimpleModal extends React.Component {
         >
           <div style={getModalStyle()} className={classes.paper}>
             <Typography variant="h6" id="modal-title">
-              Video about some of architect's work
+              <Translate id="profile.video.modalHeadline"/>
               <Video />
             </Typography>
           </div>
