@@ -8,7 +8,12 @@ import Toolbar from '@material-ui/core/Toolbar';
 import { renderToStaticMarkup } from 'react-dom/server';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+<<<<<<< HEAD
 import { withLocalize, Translate } from 'react-localize-redux';
+=======
+import { Link } from 'react-router-dom';
+import indigo from '@material-ui/core/colors/indigo';
+>>>>>>> dev
 import ArchitectsList from './ArchitectsList';
 import LanguageSwitcher from './LanguageSwitcher';
 import translation from '../store/data/translations.json';
@@ -56,9 +61,14 @@ class Header extends Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" color="inherit" noWrap>
-              <Translate id="appbar.title" />
-            </Typography>
+            <Link
+              to="."
+              className={classes.link}
+            >
+              <Typography variant="h5" className={classes.homeLink} noWrap>
+                <Translate id="appbar.title" />
+              </Typography>
+            </Link>  
             <div className={classes.grow} />
             <LanguageSwitcher />
           </Toolbar>
@@ -124,6 +134,15 @@ const styles = theme => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
+  },
+  link: {
+    textDecoration: 'none',
+  },
+  homeLink: {
+    color: theme.palette.common.white,
+    '&:hover': {
+      color: indigo[50],
+    },
   },
 });
 

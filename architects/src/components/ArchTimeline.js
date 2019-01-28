@@ -1,17 +1,33 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Timeline } from 'react-material-timeline';
+import { withStyles } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
+
+const styles = () => ({
+  timelineTitle: {
+    marginBottom: 30,
+  },
+});
 
 class ArchTimeline extends Component {
   render() {
-    const { timeline } = this.props;
+    const { classes, timeline } = this.props;
     const events = timeline.map(timelineItem => (
       {
         title: timelineItem.event,
         subheader: timelineItem.date,
       }
     ));
-    return <Timeline events={events} />;
+    return (
+      <div>
+        <Typography variant="h3" component="h2" className={classes.timelineTitle}>
+          Timeline
+        </Typography>
+
+        <Timeline events={events} />
+      </div>
+    );
   }
 }
 
@@ -20,4 +36,4 @@ export default connect(
     language: store.page.language,
     timeline: store.architects.currentArchitect.biography.timeline,
   }),
-)(ArchTimeline);
+)(withStyles(styles, { withTheme: true })(ArchTimeline));
