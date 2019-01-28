@@ -6,12 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 
-// const mapState = { center: [55.76, 37.64], zoom: 10 };
-const mapState = { center: [53.54, 27.34], zoom: 10 };
-
 const styles = () => ({
-  map: {
-  },
   mapTitle: {
     margin: 30,
     paddingTop: 30,
@@ -29,7 +24,9 @@ class MapBasics extends Component {
 
   render() {
     const { showMap } = this.state;
-    const { classes, work } = this.props;
+    const { classes, coords } = this.props;
+    const mapState = { center: [coords.coord1, coords.coord2], zoom: 10 };
+
 
     return (
       <Paper>
@@ -38,22 +35,15 @@ class MapBasics extends Component {
           <div id="map-basics" className={classes.map}>
             {showMap &&
               <Map width={'100%'} height={300} state={mapState}>
-                {/* Creating a geo object with the "Point" geometry type. */}
                 <GeoObject
-                  // The geometry description.
                   geometry={{
                     type: 'Point',
-                    coordinates: [55.8, 37.8],
+                    coordinates: [coords.coord1, coords.coord2],
                   }}
-                  // Properties.
                   properties={{
-                    // The placemark content.
-                    iconContent: 'test mark',
-                    hintContent: 'Ну давай уже тащи',
+                    iconContent: coords.title,
                   }}
-                  // Options.
                   options={{
-                    // The placemark's icon will stretch to fit its contents.
                     preset: 'islands#blackStretchyIcon',
                     draggable: false,
                   }}
@@ -72,11 +62,9 @@ class MapBasics extends Component {
   }
 }
 
-
-// export default MapBasics;
 export default connect(
   store => ({
     language: store.page.language,
-    work: store.architects.currentArchitect.biography.work.Place,
+    coords: store.architects.currentArchitect.biography.work.Place,
   }),
 )(withStyles(styles)(MapBasics));
