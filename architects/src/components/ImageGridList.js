@@ -19,8 +19,6 @@ const styles = theme => ({
     paddingBottom: '50px',
     paddingTop: '50px',
   },
-  gridList: {
-  },
 });
 
 function ImageGridList(props) {
@@ -30,7 +28,7 @@ function ImageGridList(props) {
       <Typography gutterBottom variant="h3" component="h2">
         <Translate id="profile.gallery" />
       </Typography>
-      <GridList className={classes.gridList}>
+      <GridList cellHeight={260} className={classes.gridList}>
         {projects.map(project => (
           <GridListTile>
             <img src={project.image} alt={project.title} />
