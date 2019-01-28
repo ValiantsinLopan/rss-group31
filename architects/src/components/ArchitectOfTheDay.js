@@ -2,25 +2,25 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+// import Link from '@material-ui/core/Link';
 import ArchitectInfo from './ArchitectInfo';
 
 class ArchitectOfTheDay extends ArchitectInfo {
   render() {
     const { classes } = this.props;
-    const dummyUrl = '#';
+    // const dummyUrl = '#';
     return (
-      // dummy block; to be replaced
+      // warning: frankly hardcoded
       <div className={classes.archOfTheDay}>
-        <Avatar src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Architect_Langbard_Iosif_Grigorevich.jpg/200px-Architect_Langbard_Iosif_Grigorevich.jpg" className={classes.archPhoto} />
-        <Typography className={classes.archOfTheDayName} paragraph>
-          Architect of the day block is here
+        <Avatar src="https://upload.wikimedia.org/wikipedia/ru/7/7c/Karol_VA.jpg" className={classes.archPhoto} />
+        <Typography variant="h6" component="h2" className={classes.archOfTheDayName}>
+          Vladimir Adamovich Korol
         </Typography>
-        <Typography paragraph>
+        {/* <Typography paragraph>
           <Link href={dummyUrl} className={classes.link}>
             link to the page of this architect
           </Link>
-        </Typography>
+        </Typography> */}
       </div>
     );
   }
@@ -38,7 +38,7 @@ const styles = theme => ({
     height: 100,
   },
   archOfTheDayName: {
-    paddingTop: 50,
+    paddingTop: 10,
   },
 });
 
