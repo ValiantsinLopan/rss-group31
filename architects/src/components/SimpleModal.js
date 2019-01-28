@@ -28,7 +28,7 @@ const styles = (theme) => ({
     margin: 0,
     marginTop: 70,
     marginBottom: 100,
-    width: '100%',
+    // width: '100%',
     padding: 100,
   },
   paper: {
