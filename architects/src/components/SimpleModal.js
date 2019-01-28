@@ -28,7 +28,7 @@ const styles = (theme) => ({
     margin: 0,
     marginTop: 70,
     marginBottom: 100,
-    // width: '100%',
+    // width: '100%', 
     padding: 100,
   },
   paper: {
@@ -63,7 +63,11 @@ class SimpleModal extends React.Component {
 
     return (
       <Paper className={classes.videoBlock}>
-        <Typography variant="h5" component="h2" gutterBottom>Want to watch the video about architect's work? Click the button below!</Typography>
+        <Typography variant="h4" component="h2" gutterBottom>
+          Want to watch the video about architect's work?
+          <br />
+          Click the button below!
+        </Typography>
         <Button 
         onClick={this.handleOpen} 
         className={classes.btn}

@@ -7,6 +7,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
+import indigo from '@material-ui/core/colors/indigo';
 import ArchitectsList from './ArchitectsList';
 
 const drawerWidth = 240;
@@ -39,9 +41,15 @@ class Header extends Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" color="inherit" noWrap>
-                Belarussian architects
-            </Typography>
+            <Link
+              to="."
+              className={classes.link}
+            >
+              <Typography variant="h5" className={classes.homeLink} noWrap>
+                Belarusian architects portal
+              </Typography>
+            </Link>
+
           </Toolbar>
         </AppBar>
         <nav className={classes.drawer}>
@@ -102,6 +110,15 @@ const styles = theme => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
+  },
+  link: {
+    textDecoration: 'none',
+  },
+  homeLink: {
+    color: theme.palette.common.white,
+    '&:hover': {
+      color: indigo[50],
+    },
   },
 });
 
