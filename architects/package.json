@@ -9,6 +9,7 @@
     "gh-pages": "^2.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-localize-redux": "^3.5.2",
     "react-material-timeline": "^3.0.1",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",

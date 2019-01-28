@@ -5,6 +5,7 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import Typography from '@material-ui/core/Typography';
 import { connect } from 'react-redux';
+import { Translate } from 'react-localize-redux';
 
 const styles = theme => ({
   root: {
@@ -27,7 +28,7 @@ function ImageGridList(props) {
   return (
     <div className={classes.root}>
       <Typography gutterBottom variant="h3" component="h2">
-        Photogallery
+        <Translate id="profile.gallery" />
       </Typography>
       <GridList className={classes.gridList}>
         {projects.map(project => (

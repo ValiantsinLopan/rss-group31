@@ -4,16 +4,13 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
-
 import Header from '../components/Header';
 import ContributorList from '../components/ContributorList';
 import ArchitectOfTheDay from '../components/ArchitectOfTheDay';
 
-
 class Main extends Component {
   render() {
     const { classes } = this.props;
-
     return (
       <div className={classes.container}>
         <Header />
