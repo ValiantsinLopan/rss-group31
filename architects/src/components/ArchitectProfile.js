@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageGridList from './ImageGridList';
 import ArchitectInfo from './ArchitectInfo';
+import ArchTimeline from './ArchTimeline';
 
 class ArchitectProfile extends Component {
   render() {
@@ -12,6 +13,7 @@ class ArchitectProfile extends Component {
         {/* Paste profile components below */}
         <ArchitectInfo />
         <ImageGridList />
+        <ArchTimeline />
       </main>
     );
   }
