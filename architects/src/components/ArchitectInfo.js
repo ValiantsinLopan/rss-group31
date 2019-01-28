@@ -6,7 +6,9 @@ import { connect } from 'react-redux';
 
 class ArchitectInfo extends Component {
   render() {
-    const { classes, name, language, description } = this.props;
+    const {
+      classes, name, language, description,
+    } = this.props;
     return (
       // dummy block; to be replaced
       <div className={classes.archInfo}>

@@ -3,6 +3,8 @@ import { withStyles } from '@material-ui/core/styles';
 import ImageGridList from './ImageGridList';
 import ArchitectInfo from './ArchitectInfo';
 import ArchTimeline from './ArchTimeline';
+import SimpleModal from './SimpleModal';
+
 
 class ArchitectProfile extends Component {
   render() {
@@ -14,6 +16,7 @@ class ArchitectProfile extends Component {
         <ArchitectInfo />
         <ImageGridList />
         <ArchTimeline />
+        <SimpleModal />
       </main>
     );
   }
